@@ -3,7 +3,12 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: { index: './src/index.js', header: './src/header.js', start: './src/start.js' },
+  entry: {
+    index: './src/index.js',
+    header: './src/header.js',
+    start: './src/start.js',
+    // style: './src/index.scss',
+  },
   devtool: 'eval',
   devServer: {
     static: './dist',
@@ -13,6 +18,14 @@ module.exports = {
       title: 'Restaurant',
     }),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+    ],
+  },
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
