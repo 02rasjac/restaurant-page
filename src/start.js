@@ -6,16 +6,18 @@ const title = document.createElement('h1');
 title.innerText = 'Restaurant Name';
 main.appendChild(title);
 
-const bestReviewSec = document.createElement('section');
-const bestReviewQuote = document.createElement('blockquote');
-const bestReviewName = document.createElement('p');
+function createReview() {
+  const bestReviewSec = document.createElement('section');
+  const bestReviewQuote = document.createElement('blockquote');
+  const bestReviewName = document.createElement('p');
 
-bestReviewQuote.innerText =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mi nunc, blandit id molestie ut, convallis et risus. Vestibulum venenatis.';
-bestReviewName.innerText = 'Reviewers Name';
-bestReviewSec.appendChild(bestReviewQuote);
-bestReviewSec.appendChild(bestReviewName);
-main.appendChild(bestReviewSec);
+  bestReviewQuote.innerText =
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mi nunc, blandit id molestie ut, convallis et risus. Vestibulum venenatis.';
+  bestReviewName.innerText = 'Reviewers Name';
+  bestReviewSec.appendChild(bestReviewQuote);
+  bestReviewSec.appendChild(bestReviewName);
+  return bestReviewSec;
+}
 
 function createSection(titleText, content) {
   const sec = document.createElement('section');
@@ -32,6 +34,8 @@ function createSection(titleText, content) {
 
   return sec;
 }
+
+main.appendChild(createReview());
 
 main.appendChild(
   createSection(
