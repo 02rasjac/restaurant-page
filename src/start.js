@@ -8,14 +8,15 @@ main.appendChild(title);
 
 function createReview() {
   const bestReviewSec = document.createElement('section');
+  const bestReviewFig = document.createElement('figure');
   const bestReviewQuote = document.createElement('blockquote');
-  const bestReviewName = document.createElement('p');
+  const bestReviewName = document.createElement('figcaption');
 
   bestReviewQuote.innerText =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mi nunc, blandit id molestie ut, convallis et risus. Vestibulum venenatis.';
-  bestReviewName.innerText = 'Reviewers Name';
-  bestReviewSec.appendChild(bestReviewQuote);
-  bestReviewSec.appendChild(bestReviewName);
+  bestReviewName.innerText = '- Reviewers Name';
+  bestReviewFig.append(bestReviewQuote, bestReviewName);
+  bestReviewSec.appendChild(bestReviewFig);
   return bestReviewSec;
 }
 
