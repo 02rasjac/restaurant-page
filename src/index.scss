@@ -14,3 +14,24 @@ $t-color: #e6e6e6;
 html {
   background-color: $bg-color;
 }
+
+body {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+
+  font-size: 1.3rem;
+  font-weight: bold;
+  background-color: $yinmn-blue;
+
+  ul {
+    display: flex;
+    gap: 2rem;
+
+    appearance: none;
+    list-style: none;
+  }
+}
