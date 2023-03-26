@@ -77,3 +77,18 @@ main {
     font-size: 1.1rem;
   }
 }
+
+.split-column {
+  display: grid;
+  grid-template-columns: minmax(auto, 1fr) 2fr;
+  align-items: center;
+
+  h2 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid $rose-quartz;
+    margin-right: 2rem;
+    padding-right: 2rem;
+  }
+}

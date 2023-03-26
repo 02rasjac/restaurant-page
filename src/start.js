@@ -33,6 +33,7 @@ function createSection(titleText, content) {
     sec.appendChild(p);
   }
 
+  sec.classList.add('split-column');
   return sec;
 }
 
