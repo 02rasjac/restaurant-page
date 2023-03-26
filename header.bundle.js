@@ -15,7 +15,7 @@
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst header = document.createElement('header');\nconst nav = document.createElement('nav');\nconst list = document.createElement('ul');\nconst links = [\n  {\n    text: Home,\n  },\n  {\n    text: Menu,\n  },\n  {\n    text: Contact,\n  },\n];\n\nlinks.forEach((link) => {\n  const a = document.createElement('a');\n  a.innerText = link.text;\n  list.appendChild(a);\n});\n\nnav.appendChild(list);\nheader.appendChild(nav);\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (header);\n\n\n//# sourceURL=webpack://restaurant/./src/header.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst header = document.createElement('header');\nconst nav = document.createElement('nav');\nconst list = document.createElement('ul');\nconst links = [\n  {\n    text: 'Home',\n  },\n  {\n    text: 'Menu',\n  },\n  {\n    text: 'Contact',\n  },\n];\n\nlinks.forEach((link) => {\n  const a = document.createElement('a');\n  const li = document.createElement('li');\n  li.innerText = link.text;\n  a.appendChild(li);\n  list.appendChild(a);\n});\n\nnav.appendChild(list);\nheader.appendChild(nav);\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (header);\n\n\n//# sourceURL=webpack://restaurant/./src/header.js?");
 
 /***/ })
 
