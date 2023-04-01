@@ -20,5 +20,20 @@ links.forEach((link) => {
 });
 
 function changePage(e) {
-  console.log(this.id);
+  let newMain;
+  switch (this.id) {
+    case 'home':
+      newMain = start;
+      break;
+    case 'menu':
+      newMain = [document.createElement('h1')];
+      newMain[0].innerText = 'Menu';
+      break;
+    default:
+      return;
+  }
+  main.innerText = '';
+  newMain.forEach((el) => {
+    main.appendChild(el);
+  });
 }
