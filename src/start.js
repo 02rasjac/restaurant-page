@@ -1,10 +1,11 @@
 import createList from './list';
 
-const main = document.createElement('main');
+const siblings = [];
+
 const title = document.createElement('h1');
 
 title.innerText = 'Restaurant Name';
-main.appendChild(title);
+siblings.push(title);
 
 function createReview() {
   const bestReviewSec = document.createElement('section');
@@ -37,9 +38,9 @@ function createSection(titleText, content) {
   return sec;
 }
 
-main.appendChild(createReview());
+siblings.push(createReview());
 
-main.appendChild(
+siblings.push(
   createSection(
     'Hours',
     createList([
@@ -54,6 +55,6 @@ main.appendChild(
   )
 );
 
-main.appendChild(createSection('Location', 'Husky Trail 4, Dogville.'));
+siblings.push(createSection('Location', 'Husky Trail 4, Dogville.'));
 
-export default main;
+export default siblings;

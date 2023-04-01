@@ -4,9 +4,14 @@ import footer from './footer';
 
 import style from './index.scss';
 
+const main = document.createElement('main');
+start.forEach((el) => {
+  main.appendChild(el);
+});
+
 const body = document.body;
 body.appendChild(header);
-body.appendChild(start);
+body.appendChild(main);
 body.appendChild(footer);
 
 const links = header.querySelectorAll('a');
