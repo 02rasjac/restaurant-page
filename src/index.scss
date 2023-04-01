@@ -26,6 +26,9 @@ html {
 
 body {
   margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -91,4 +94,12 @@ main {
     margin-right: 2rem;
     padding-right: 2rem;
   }
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 1rem;
+  color: change-color($t-color, $alpha: 0.8);
+  background-color: darken($bg-color, 3%);
 }
