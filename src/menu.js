@@ -1,7 +1,28 @@
 import createTitle from './title';
 
+import hamburgerImg from './assets/images/hamburger.jpg';
+
 const siblings = [];
 siblings.push(createTitle('Menu'));
+
+const mainDishes = createSection('Main dishes', [
+  createItem(
+    'Hamburger',
+    'Classic hamburge with high quality cheese, onion, homemade dressing, thinly cut tomato and pickles',
+    6,
+    hamburgerImg,
+    'Juciy hamburger'
+  ),
+  createItem(
+    'Hamburger',
+    'Classic hamburge with high quality cheese, onion, homemade dressing, thinly cut tomato and pickles',
+    6,
+    hamburgerImg,
+    'Juciy hamburger'
+  ),
+]);
+
+siblings.push(mainDishes);
 
 function createSection(title, items) {
   const sec = document.createElement('section');
@@ -32,7 +53,7 @@ function createItem(title, desc, price, imgSrc, imgAlt = '') {
   const pr = document.createElement('p');
   pr.innerText = '$' + price;
 
-  const img = Image();
+  const img = new Image();
   img.src = imgSrc;
   img.alt = imgAlt;
 
