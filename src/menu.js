@@ -3,6 +3,22 @@ import createTitle from './title';
 const siblings = [];
 siblings.push(createTitle('Menu'));
 
+function createSection(title, items) {
+  const sec = document.createElement('section');
+  sec.classList.add('menu-section');
+
+  const h2 = document.createElement('h2');
+  h2.innerText = title;
+
+  sec.appendChild(h2);
+
+  items.forEach((item) => {
+    sec.appendChild(item);
+  });
+
+  return sec;
+}
+
 function createItem(title, desc, price, imgSrc, imgAlt = '') {
   const sec = document.createElement('section');
   sec.classList.add('menu-item');
