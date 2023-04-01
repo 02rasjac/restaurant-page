@@ -6,7 +6,9 @@ import footer from './footer';
 import style from './index.scss';
 
 const main = document.createElement('main');
-start.forEach((el) => {
+
+//* Set up the starting page. Should generally be `start`.
+menu.forEach((el) => {
   main.appendChild(el);
 });
 
