@@ -1,11 +1,9 @@
 import createList from './list';
+import createTitle from './title';
 
 const siblings = [];
 
-const title = document.createElement('h1');
-
-title.innerText = 'Restaurant Name';
-siblings.push(title);
+siblings.push(createTitle('Restaurant Name'));
 
 function createReview() {
   const bestReviewSec = document.createElement('section');
