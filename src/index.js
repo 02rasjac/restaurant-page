@@ -19,6 +19,7 @@ body.appendChild(footer);
 
 const links = header.querySelectorAll('a');
 links.forEach((link) => {
+  if (link.id === 'home') link.classList.add('active');
   link.addEventListener('click', changePage);
 });
 
@@ -34,6 +35,11 @@ function changePage(e) {
     default:
       return;
   }
+
+  // Add class `active` to the link that is active.
+  links.forEach((link) => link.classList.remove('active'));
+  this.classList.add('active');
+
   main.innerText = '';
   newMain.forEach((el) => {
     main.appendChild(el);
