@@ -8,7 +8,7 @@ import style from './index.scss';
 const main = document.createElement('main');
 
 //* Set up the starting page. Should generally be `start`.
-menu.forEach((el) => {
+start.forEach((el) => {
   main.appendChild(el);
 });
 
