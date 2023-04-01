@@ -15,6 +15,7 @@ const links = [
 
 links.forEach((link) => {
   const a = document.createElement('a');
+  a.setAttribute('id', link.text);
   const li = document.createElement('li');
   li.innerText = link.text;
   a.appendChild(li);
