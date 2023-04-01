@@ -62,7 +62,7 @@ main {
   border-radius: 3rem;
   padding: 3rem;
 
-  section {
+  > section {
     background-color: $yinmn-blue;
     padding: 2rem;
     width: 100%;
