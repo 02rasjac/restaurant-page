@@ -51,7 +51,7 @@ function createItem(title, desc, price, imgSrc, imgAlt = '') {
   p.innerText = desc;
 
   const pr = document.createElement('p');
-  pr.innerText = '$' + price;
+  pr.innerHTML = '<b>Price:</b> $' + price;
 
   const img = new Image();
   img.src = imgSrc;
