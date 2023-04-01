@@ -1,6 +1,7 @@
 import createTitle from './title';
 
 import hamburgerImg from './assets/images/hamburger.jpg';
+import wineImg from './assets/images/wine.jpg';
 
 const siblings = [];
 siblings.push(createTitle('Menu'));
@@ -22,7 +23,18 @@ const mainDishes = createSection('Main dishes', [
   ),
 ]);
 
+const beverages = createSection('Beverages', [
+  createItem(
+    'Wine',
+    'A large selection of red and white wine from around the globe',
+    '4-299',
+    wineImg,
+    'Two glasses and bottles of red respectivly white wine'
+  ),
+]);
+
 siblings.push(mainDishes);
+siblings.push(beverages);
 
 function createSection(title, items) {
   const sec = document.createElement('section');
