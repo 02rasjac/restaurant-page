@@ -1,5 +1,6 @@
 import header from './header.js';
 import start from './start';
+import menu from './menu';
 import footer from './footer';
 
 import style from './index.scss';
@@ -26,8 +27,7 @@ function changePage(e) {
       newMain = start;
       break;
     case 'menu':
-      newMain = [document.createElement('h1')];
-      newMain[0].innerText = 'Menu';
+      newMain = menu;
       break;
     default:
       return;
