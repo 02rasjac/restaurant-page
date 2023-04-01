@@ -117,3 +117,12 @@ footer {
     width: 100%;
   }
 }
+
+.menu-item:nth-child(odd) {
+  text-align: end;
+  img {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    width: 100%;
+  }
+}
